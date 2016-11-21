@@ -1,0 +1,27 @@
+<html><head><title>Stats</title></head><body>
+{% if num == 0 %}
+    Нечего отображать!
+{% else %}
+    <table border=1>
+        <tr>
+            <td><b>№</b></td>
+            {% for q in ind %}
+                <td><b>{{q[2]}}</b></td>
+            {% endfor %}
+        </tr>
+        {% for i in range(num) %}
+            <tr>
+                <td>{{i+1}}.</td>
+                {% for q in ind %}
+                    <td><i>{{stat[q[1]][i]}}</i></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <br><a href = "/json", download="database.json">Скачать в формате json</a>
+{% endif %}
+<br><br>
+<a href = "/">Главная страница</a><br>
+<a href = "/search">Поиск по результатам</a><br>
+<a href = "/manage/">Управление формой</a><br>
+</body></html>

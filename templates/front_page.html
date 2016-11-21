@@ -1,0 +1,14 @@
+<html><head><title>Questionnaire</title></head><body>
+Ниже приводится список некоторых слов на русском языке. Вам нужно перевести эти слова на ваш родной язык, указав его в первом вопросе.<br>
+Если вы можете предложить несколько вариантов перевода, запишите их через запятую.<br><br>
+<form method="GET">
+    {% for i in range(num) %}
+    {{i+1}}. {{quest[i][0]}} <input type="text" name="{{quest[i][1]}}" value=""><br>
+    {% endfor %}
+    <br><input type="submit" value="Отправить">
+</form>
+<br>
+<a href = "/stats">Статистика ответов</a><br>
+<a href = "/search">Поиск по результатам</a><br>
+<a href = "/manage/">Управление формой</a><br>
+</body></html>

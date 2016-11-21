@@ -1,0 +1,25 @@
+<html><head><title>Manager</title></head><body>
+{% if disc != None %}{{disc}}<br>{% endif %}
+<form method="GET">
+    <table>
+        {% for i in range(num) %}
+            <tr>
+                <td>{{i+1}}.</td>
+                <td>Вопрос для гостей: <input type="text" name="qu{{i}}" value="{{quest[i][0]}}"></td>
+                <td>Внутреннее имя: <input type="text" name="name{{i}}" value="{{quest[i][1]}}"></td>
+                <td>Заголовок: <input type="text" name="capt{{i}}" value="{{quest[i][2]}}"></td>
+                <td><input type="submit" name="del{{i}}" value="Удалить вопрос"></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <input type="submit" name="add" value="Добавить вопрос"><br>
+    <input type="submit" name="deldb" value="Очистить базу ответов">
+    <input type="submit" name="delall" value="Очистить всё"><br><br>
+    <input type="submit" value="Сохранить изменения">
+</form>
+<br>
+<a href = "/">Главная страница</a><br>
+<a href = "/stats">Статистика ответов</a><br>
+<a href = "/search">Поиск по результатам</a><br>
+</body></html>

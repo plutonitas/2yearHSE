@@ -1,0 +1,15 @@
+<html><head><title>Search</title></head><body>
+<form method="GET">
+    Поиск: <input type="text" name="q" value=""><br><br>
+    Выберите столбцы, в которых будет производиться поиск:<br>
+    {% for q in quest %}
+        <input type="checkbox" name="{{q[1]}}"> {{q[2]}}<br>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Искать">
+</form>
+<br>
+<a href = "/">Главная страница</a><br>
+<a href = "/stats">Статистика ответов</a><br>
+<a href = "/manage/">Управление формой</a><br>
+</body></html>
