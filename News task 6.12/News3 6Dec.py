@@ -74,8 +74,8 @@ def compare():
     first = TXT1()
     second = TXT2()
     third = TXT3()
-    forth = TXT4()
-    res = first.intersection(second,third,forth)
+    fourth = TXT4()
+    res = first.intersection(second,third,fourth)
     file = open('intersection.txt','w',encoding = 'utf-8')
     for els in sorted(res):
         intrsec = reslist.append(els)
@@ -90,10 +90,10 @@ def contrast():
     first = TXT1()
     second = TXT2()
     third = TXT3()
-    forth = TXT4()
+    fourth = TXT4()
     resAB = first.symmetric_difference(second)
     resBC = resAB.symmetric_difference(third)
-    resCD = resBC.symmetric_difference(forth)
+    resCD = resBC.symmetric_difference(fourth)
     file = open('symdif.txt','w', encoding = 'utf-8')
     for els in sorted(resCD):
         common = reslist.append(els)
