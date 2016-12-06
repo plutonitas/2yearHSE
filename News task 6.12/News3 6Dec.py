@@ -28,8 +28,9 @@ def TXT1():
 
     textset = set(text.lower().split(' '))
     #print(textset)
-    return textset
     file.close()
+    return textset
+    
     
 
 def TXT2():
@@ -42,8 +43,9 @@ def TXT2():
     text = re.sub('\.|\,|\"|\«|\»|\:',' ',text)
     textset = set(text.lower().split(' '))
     #print(textset)
-    return textset
     file.close()
+    return textset
+    
 
 def TXT3():
     file = open('texthtml3.html','r',encoding = 'utf-8')
@@ -54,8 +56,9 @@ def TXT3():
     text = re.sub('\.|\,|\"|\«|\»|\:',' ',text)
     textset = set(text.lower().split(' '))
     #print(textset)
-    return textset
     file.close()
+    return textset
+    
 
 def TXT4():
     file = open('texthtml4.html','r',encoding = 'utf-8')
@@ -66,8 +69,9 @@ def TXT4():
     text = re.sub('\.|\,|\"|\«|\»|\:',' ',text)
     textset = set(text.lower().split(' '))
     #print(textset)
-    return textset
     file.close()
+    return textset
+    
 
 def compare():
     reslist = []
