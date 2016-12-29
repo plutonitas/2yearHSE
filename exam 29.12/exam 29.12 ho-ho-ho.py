@@ -21,7 +21,8 @@ def getText():
             newword = re.sub(regTag2,'',newword)
 
             if newword and newword.lower()[0] in cyrillic:
-                    if newword.startswith('с'):
+                    newword = newword.lower()
+                    if newword and newword.startswith('с'):
                          #print(newword)
                         morph = m.analyze(newword)
                         #print(morph)
