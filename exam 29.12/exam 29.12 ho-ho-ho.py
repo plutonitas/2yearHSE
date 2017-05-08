@@ -23,7 +23,7 @@ def getText():
             if newword and newword.lower()[0] in cyrillic:
                     newword = newword.lower()
                     if newword and newword.startswith('с'):
-                         #print(newword)
+                        print(newword)
                         morph = m.analyze(newword)
                         #print(morph)
                         noAnalysis = 0
