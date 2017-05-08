@@ -142,8 +142,8 @@ def plot_users_from_posts (posts):
     city_avg_lens = [sum(cities[i]) / len(cities[i]) for i in topcities]
 
     plt.figure()
-    plt.bar([i for i in range(len(topcities))], city_avg_lens)
-    plt.xticks([i for i in range(len(topcities))], topcities)
+    plt.bar(range(len(topcities)), city_avg_lens)
+    plt.xticks(range(len(topcities)), topcities, rotation='vertical')
     plt.title('City/post length')
     plt.show()
 
@@ -178,12 +178,12 @@ def plot_users_from_comments (comments):
     city_avg_lens = [sum(cities[i]) / len(cities[i]) for i in topcities]
 
     plt.figure()
-    plt.bar([i for i in range(len(topcities))], city_avg_lens)
-    plt.xticks([i for i in range(len(topcities))], topcities)
+    plt.bar(range(len(topcities)), city_avg_lens)
+    plt.xticks(range(len(topcities)), topcities, rotation='vertical')
     plt.title('City/comment length')
     plt.show()
 
-posts = load_posts('unknown_russia')
+posts = load_posts('wbtbwb_official')
 comments = load_comments(posts)
 plot_word_counts(posts, comments)
 plot_users_from_posts(posts)
